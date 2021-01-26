@@ -1,0 +1,23 @@
+#navbar{
+background-color: gainsboro;
+
+    }
+
+#navbar li a{
+    color: rgb(77, 129, 8);
+    
+    }
+#navbar li a:hover{
+    background-color: gray;        
+    }
+
+.footer{
+    background-color: gainsboro;
+    text-align: center;
+    width: 100%;
+}
+
+address{
+    
+    font-size: 15px;
+}
