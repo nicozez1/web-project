@@ -3,21 +3,178 @@ body{
 	font-family: 'JetBrains Mono', monospace !important;
 }
 
-#navbar {
-	
+.navbar {
+	position: relative;
+	overflow: hidden;
 	background-color: gainsboro;
+	font-size: 25px;
+	height: 40px;
 }
 
-#navbar li a {
+.navbar div a {
 	
     color: #9c1f65;
 }
 
-#navbar li a:hover {
+.navbar div a:hover {
 	
     background-color: gray; 
 	color: white;
 }
+
+.navbar-centered-Home{
+	float: none;
+	position: absolute;
+	top:50%;
+	left:44%;
+	transform: translate(-50%, -50%);
+}
+
+.navbar-centered-aboutus{
+	float: none;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+.navbar-centered-contact{
+	float: none;
+	position: absolute;
+	top:50%;
+	left:57.5%;
+	transform: translate(-50%, -50%);
+}
+/* Mobiili versio navista */
+@media screen and (max-width: 600px) {
+
+	.navbar {
+
+		height: 80px;
+		font-size:20px;
+	}
+	.navbar div a{
+	  float: none;
+	  display: block;
+	}
+	
+	.navbar-centered-Home, .navbar-centered-aboutus, .navbar-centered-contact {
+	  position: relative;
+	  top: 30%;
+	  left: 20px;
+	  transform: none;
+	}
+	.buttonKirjautuminen_div{
+		
+		position: relative;
+		top: 10%;
+		left: 5% !important;
+		transform: none;
+		
+	  }
+	  .buttonOstoskori_div{
+		
+		position: relative;
+		top: 10%;
+		left: 25% !important;
+		transform: none;
+		
+	  }
+	  .search-box {
+		position: relative;
+		top: 28% !important;;
+		left: 60% !important;
+		transform: none;
+	  }
+
+
+  }
+  .buttonOstoskori_div{
+	  bottom: 10%;
+	  left: 70%;
+	  position: absolute;
+  }
+  .buttonKirjautuminen_div{
+	bottom: 10%;
+	left: 66%;
+	position: absolute;
+}
+
+  .button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 3px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+  }
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   }
+
+   .search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+   }
+
+   .search-box:hover > .search-btn {
+    background: white;
+    color: black;
+   }
+
+   .search-btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+   }
+
+   .search-btn > i {
+    font-size: 30px;
+   }
+
+   .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+   }
+   .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+    color:white;
+    text-decoration:none;
+    }
+
 
 .icon-bar {
 	
@@ -110,3 +267,4 @@ address {
     left: 100%;
     margin-left: 15px;
 }
+
