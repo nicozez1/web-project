@@ -57,12 +57,25 @@ body{
 	  display: block;
 	}
 	
-	.navbar-centered-Home, .navbar-centered-aboutus, .navbar-centered-contact {
+	.navbar-centered-Home{
 	  position: relative;
 	  top: 30%;
 	  left: 20px;
 	  transform: none;
 	}
+	.navbar-centered-aboutus{
+		position: relative;
+		top: 30%;
+		left: -40px;
+		transform: none;
+	  }
+	  .navbar-centered-contact {
+		position: relative;
+		top: 30%;
+		left: -100px;
+		transform: none;
+	  }
+
 	.buttonKirjautuminen_div{
 		
 		position: relative;
@@ -83,8 +96,17 @@ body{
 		position: relative;
 		top: 28% !important;;
 		left: 60% !important;
-		transform: none;
+		
 	  }
+	  .search_icon{
+
+		float: right !important;
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		
+
+		}
 
 
   }
@@ -129,27 +151,7 @@ body{
 	padding: 0 6px;
    }
 
-   .search-box:hover > .search-btn {
-    background: white;
-    color: black;
-   }
 
-   .search-btn {
-    color: #e84118;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    transition: 0.4s;
-    color: white;
-    cursor: pointer;
-   }
-
-   .search-btn > i {
-    font-size: 30px;
-   }
 
    .search-txt {
     border: none;
