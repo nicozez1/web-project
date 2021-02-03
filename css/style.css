@@ -1,26 +1,31 @@
 body {
 	
-	font-family: 'Unna', serif !important;
+	font-family: 'Oswald', sans-serif !important; 
+	
+}
+
+header {
+	background-color: #D6FFDD;
 }
 
 .navbar {
 	 
 	position: relative;
 	overflow: visible;
-	background-color: gainsboro;
+	background-color: #272B26;
 	font-size: 25px;
 	height: auto;
 }
 
 .navbar div a {
 	
-	color: #9c1f65;
+	color: #EBF1E8;
 	text-decoration: none;
 }
 
 .navbar div a:hover {
 	
-	color: #482078;
+	color: #FFFFFF;
 	font-size: 28px;
 }
 
@@ -57,7 +62,7 @@ body {
 	display: inline-block;
 	left: 58%;
 	bottom:20%;
-	color: #9c1f65;
+	color: #EBF1E8;
 	text-decoration: none;
 }
   
@@ -65,8 +70,9 @@ body {
 
 	display: none;
 	position: absolute;
-	background-color: #f9f9f9;
-	color: #9c1f65;
+	background-color: #272B26;
+	color: #EBF1E8;
+	font-size: 24px;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	padding: 12px 16px;
@@ -176,7 +182,7 @@ body {
 
 	background-color: white;
 	border: none;
-	color: #9c1f65;
+	color: #272B26;
 	padding: 3px;
 	text-align: center;
 	text-decoration: none;
@@ -191,7 +197,7 @@ body {
     top: 50%;
     left: 90%;
     transform: translate(-5%, -50%);
-	background: white;
+	background: black;
     height: 40px;
     border-radius: 40px;
 	padding-left: 10px;
@@ -211,7 +217,7 @@ body {
     outline: none;
     float: left;
     padding: 0;
-    color: black;
+    color: #939393;
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
@@ -228,7 +234,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color:white;
+    color: #2F2F2F;
     text-decoration:none;
 }
 
@@ -277,8 +283,9 @@ body {
 
 .footer {
 	
-    background-color: gainsboro;
+    background-color: #272B26;
     text-align: center;
+	color: #EBF1E8;
 	width: 100%;
 	bottom: 0;
 	position: absolute;
@@ -308,7 +315,7 @@ address {
     top: 50%;
     width: 200%;
     height: 3px;
-    background: #9c1f65;
+    background: #63B282;
 }
 
 .strike > span:before {
