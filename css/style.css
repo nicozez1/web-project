@@ -84,6 +84,50 @@ header {
 	display: block;
 }
 
+/* Pop-up kirjautuminen */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 288px;
+  right: 200px;
+  border: 3px solid #f1f1f1;
+  z-index: 8;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: #272B26;
+}
+
 /* Mobiili versio navista */
 @media screen and (max-width: 600px) {
 
