@@ -1,8 +1,8 @@
 <?php
 
-session_start();
+
 $initials=parse_ini_file(".connect.ini");
-$database = $initials["dbname_users"];
+$database = $initials["dbname_tuote"];
 $username = $initials["username"];
 $password = $initials["password"];
 $server = $initials["servername"];
