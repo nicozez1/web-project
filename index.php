@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 	
 </head>
+
 <body>
+<?php
+include "config.php";
+include "login.php";
+?>
 
 	<!-- Logo and header -->
 
@@ -39,7 +46,7 @@
 			<button class="button"><i class="fa fa-shopping-cart"></i></button>
 		</div>
 		<div class="buttonKirjautuminen_div">
-			<button class="button">Sign In <i class="fa fa-sign-in"></i></button>
+			<button class="button" onclick="openForm()">Sign In <i class="fa fa-sign-in"></i></button>
 		</div>
 		<div class="dropdown">
 			<span>Products</span>
@@ -50,7 +57,35 @@
 				</div>
 		</div>
 	</div>
+	<div class="form-popup" id="myForm">
+  <form  class="form-container" method="post" action="">
+    <h1>Login</h1>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" id="txt_uname" name="txt_uname" placeholder="Enter Username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="txt_pwd" name="txt_pwd" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn" name="but_submit" id="but_submit">Login</button>
+    <button type="button"  class="btn cancel" onclick="closeForm()">Close</button>
+	
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
     </header>
+	
+	
   
 	<!-- Social media bar -->
   
@@ -100,7 +135,7 @@
 			<span class="visually-hidden">Previous</span>
 		</a>
 		<a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="carousel-control-next-icon" area-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</a>
 				</div>
@@ -130,6 +165,9 @@
 			</div> 
 		</div>
 		<p>Copyright © 2021 DreamTeam</p>  
-	</div>     
+	</div>  
+		
+
+
 </body>
 </html>
