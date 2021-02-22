@@ -6,7 +6,10 @@ body {
 
 header {
 	background-color: #D6FFDD;
+
 }
+
+
 
 .navbar {
 	 
@@ -165,7 +168,24 @@ header {
 		top: 30%;
 		left: -10px;
 		transform: none;
-	  }
+		
+	  }.navbar-centered-logout {
+
+	 	 position: relative;
+	 	 top: 30%;
+	 	 left: 1px;
+	  	transform: none;
+	}
+	
+	.navbar-centered-addproduct {
+
+	float: none;
+	position: relative;
+	top:20%;
+	left:45%;
+	transform: translate(-50%, -50%);
+	}
+
 
 	.buttonKirjautuminen_div {
 		
@@ -207,6 +227,7 @@ header {
 			
 		}
   }
+  
 
 .buttonOstoskori_div {
 
@@ -332,7 +353,8 @@ header {
 	color: #EBF1E8;
 	width: 100%;
 	bottom: 0;
-	position: absolute;
+	position: fixed;
+	overflow: auto !important;
 }
 
 address {
@@ -372,16 +394,29 @@ address {
     margin-left: 15px;
 }
 
+
+
+h1{
+	text-align: center;
+}
+
 table, th, td {
 	
-	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid black !important;
 	border-collapse: collapse;
+	
 }
 
 th, td {
 	
 	padding: 15px;
 	text-align: left;
+}
+#margin {
+	padding-top: 20px;
+	padding-bottom: 60px;
 }
 
 #tuotelista tr:nth-child(even) {
@@ -396,6 +431,6 @@ th, td {
 
 #tuotelista th {
 	
-	background-color: #006394;
+	background-color: #272B26;
 	color: white;
 }

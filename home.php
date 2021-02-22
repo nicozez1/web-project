@@ -14,16 +14,40 @@ if(isset($_POST['but_logout'])){
 ?>
 <!doctype html>
 <html>
-    <head><link rel="stylesheet" href="css/style.css"></head>
+    <head>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+	
+	</head>
     <body>
-        <h1>Homepage</h1>
-        <form method='post' action="">
-            <input type="submit" value="Logout" name="but_logout">
-        </form>
-    
-
-<form action = "lisaa.php" method="post"><input type="submit" value="Lisää tuote"></form><br>
-
+	
+	<header>
+		
+		<img src="images/ViberLogo2.png" class="rounded mx-auto d-block img-fluid" alt="Header image" style="width: 15%; height: 15%;">
+		
+        <h1>Product management</h1>
+		<div class="navbar">
+			
+				<form method='post' action="">
+					<input type="submit" value="Logout" name="but_logout">
+				</form>
+			
+			
+				<form action = "lisaa.php" method="post">
+					<input type="submit" value="Add Product">
+				</form>
+				<br>
+			
+		</div>
+		
+	</header>
+	
+	<div class="container-fluid footer">
+		<p>Copyright © 2021 DreamTeam</p>  
+	</div> 
+	
 <?php
 
     include "config2.php";
@@ -33,12 +57,12 @@ if(isset($_POST['but_logout'])){
 	
 	if (mysqli_num_rows($result) > 0) {
 		
-		echo "<table id='tuotelista'>
+		echo "<div id = margin><table id='tuotelista'>
 				<tr>
 					<th>ID</th>
-					<th>Nimi</th> 
-					<th>Merkki</th>
-					<th>Hinta</th>
+					<th>Name</th> 
+					<th>Brand</th>
+					<th>Price</th>
 					<th></th>
 					<th></th>
 				</tr>";
@@ -50,11 +74,11 @@ if(isset($_POST['but_logout'])){
 					<td>'. $row["nimi"] .'</td>
 					<td>'. $row["merkki"] .'</td>
 					<td>'. $row["hinta"] .'</td>
-					<td><form action = "poista.php?id='.$row["id"].'" method="post"><input type="submit" onclick="return confirm(\'Haluatko varmasti poistaa kohteen?\');" value="Poista"></form></td>
-					<td><form action = "muokkaa.php?id='.$row["id"].'" method="post"><input type="submit" value="Muokkaa"></form></td>
+					<td><form action = "poista.php?id='.$row["id"].'" method="post"><input type="submit" onclick="return confirm(\'Haluatko varmasti poistaa kohteen?\');" value="Remove"></form></td>
+					<td><form action = "muokkaa.php?id='.$row["id"].'" method="post"><input type="submit" value="Edit"></form></td>
 				</tr>';
 		}
-		echo "</table>";
+		echo "</div></table>";
 		
 	} else {
 
